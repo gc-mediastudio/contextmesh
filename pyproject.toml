@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "contextmesh"
+version = "0.1.0"
+description = "High-horizon multi-agent orchestration engine for long-context evaluation and media synthesis"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["multi-agent", "orchestration", "claude", "openai", "long-context", "media-pipelines"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+dependencies = [
+    "pydantic>=2.0.0",
+    "typing-extensions>=4.5.0"
+]
+
+[project.optional-dependencies]
+ai = [
+    "anthropic>=0.20.0",
+    "openai>=1.10.0"
+]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0"
+]
+
+[project.urls]
+Homepage = "https://gcmediastudio.com"
+Repository = "https://github.com/gcmediastudio/contextmesh"
